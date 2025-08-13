@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Chess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+      <div class="row">
+        <button id="resetBtn" class="btn">Reset</button>
+      </div>
+      <div class="row">
+        <label class="btn" style="display:flex; align-items:center; gap:8px">
+          <input id="modeToggle" type="checkbox" /> Light mode
+        </label>
+      </div>
+    </div>
+
+    <div class="board-wrap">
+      <div id="board" class="board" aria-label="chess board" role="grid"></div>
+    </div>
+
+    <aside class="panel">
+      <h3 style="margin:0">Status</h3>
+      <div id="status" class="msg">Press Play to start.</div>
+
+      <h3 style="margin:8px 0 0">Moves</h3>
+      <div id="moves" class="msg" style="white-space:pre-wrap"></div>
+
+      <div class="section" id="instructions">
+        <h3>How to play</h3>
+        <ol>
+          <li>White moves first. Click a piece to see legal moves. Click a target square to move.</li>
+          <li>The game ends on checkmate. A banner will prompt you to reset.</li>
+          <li>Pawns promote to a queen on the last rank in this build. Castling and en passant are not included.</li>
+        </ol>
+      </div>
+
+      <div class="section" id="about">
+        <h3>About the creator</h3>
+        <p id="aboutText"></p>
+      </div>
+
+      <div class="row">
+        <button id="showInstructions" class="btn">Instructions</button>
+        <button id="showAbout" class="btn">About</button>
+      </div>
+    </aside>
+  </div>
+
+ 
+  <div id="menu" class="overlay">
+    <div class="modal menu">
+      <h1>Simple Chess</h1>
+      <p>Insert message here!!</p>
+      <div class="grid">
+        <button id="playBtn" class="btn primary">Play</button>
+        <button id="menuInstructionsBtn" class="btn">Instructions</button>
+        <button id="menuAboutBtn" class="btn">About</button>
+      </div>
+      <div id="menuSections" style="margin-top:16px">
+        <div id="menuInstructions" class="section">
+          <h3>Chess basics</h3>
+          <ul>
+            <li>Goal: checkmate the opponent's king.</li>
+            <li>Pieces: King, Queen, Rook, Bishop, Knight, Pawn.</li>
+            <li>Checkmate: king is in check and no legal move can remove it.</li>
+          </ul>
+        </div>
+        <div id="menuAbout" class="section">
+          <h3>About the creator</h3>
+          <p id="menuAboutText"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
