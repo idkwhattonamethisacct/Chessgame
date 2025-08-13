@@ -1,5 +1,5 @@
 // ====== Configurable "About Me" text ======
-const ABOUT_ME = `Hi, I'm Evander Mejia. Message goes here!!`;
+const ABOUT_ME = `Hi, I'm Evander Mejia. I am a computer science student with an interest in web development. This chess project is a simple implementation to practice my skills in JavaScript and DOM manipulation. I hope you enjoy playing.`;
 
 // ====== Piece symbols (Unicode) ======
 const SYMBOLS = {
